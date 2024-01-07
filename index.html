@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLY Reviews</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="png" href="https://i.postimg.cc/m2cQ6h7M/fly.png" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="" target="_blank"
+        ><img src="https://i.postimg.cc/m2cQ6h7M/fly.png" class="logo" alt=""
+      /></a>
+      <div class="search-flex">
+        <input
+          class="search"
+          type="text"
+          id="movieName"
+          placeholder="Search any movie..."
+          onchange="searchMovie()"
+        />
+        <button class="search-btn" onclick="searchMovie()">
+          <img src="https://i.postimg.cc/v8pnLjWt/search.png" alt="" />
+        </button>
+      </div>
+    </nav>
+
+    <div id="notFound" class="d-none">
+      <div class="icon">
+        <img src="https://i.postimg.cc/mgZHGnWC/dog.png" alt="" />
+      </div>
+      <h2 class="nf-title">Couldn't find "<span id="name"></span>"</h2>
+      <div class="nf-desc">
+        Try searching for something else or try with a different spelling
+      </div>
+    </div>
+
+    <div id="found" class="movieContainer d-none">
+      <div class="red">
+        <h3 class="title" id="title">Avengers Endgame</h3>
+        <p id="desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ut libero
+          quas.
+        </p>
+        <p>Released on: <span id="date"></span></p>
+        <p>Genre: <span id="genre"></span></p>
+        <p>Actors: <span id="actors"></span></p>
+        <p>Box Office Collection: <span id="collection"></span></p>
+        <p>Awards: <span id="awards"></span></p>
+        <p>Directors: <span id="director"></span></p>
+        <p>Writers: <span id="writer"></span></p>
+        <p>IMDB Rating: <span id="rating"></span></p>
+      </div>
+      <img
+        class="poster"
+        id="poster"
+        src="https://m.media-amazon.com/images/M/MV5BMTYzOTE2NjkxN15BMl5BanBnXkFtZTgwMDgzMTg0MzE@._V1_SX300.jpg"
+        alt=""
+      />
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
